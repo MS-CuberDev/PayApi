@@ -1,0 +1,34 @@
+.simple {
+    padding-top: 150px;
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+
+        @include for-work() {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        &-left {
+
+            &-title {
+                @include heading-two();
+                padding-bottom: 24px;
+            }
+
+            &-description {
+                @include paragraph();
+                color: $light-grey;
+            }
+        }
+
+        &-right {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

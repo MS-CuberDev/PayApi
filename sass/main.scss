@@ -1,0 +1,105 @@
+@import './fonts';
+@import './variables';
+@import './mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text-font;
+    background-color: $main-bg;
+    overflow-x: hidden;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: $main-color;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.btn {
+    font-family: $text-font;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.115385px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    transition: .2s ease;
+    z-index: 10;
+}
+
+.send {
+    background-color: $white-color;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    border-radius: 24px;
+    margin: 42px 0 16px;
+
+    @include for-hero() {
+            max-width: 70%;
+            margin: 42px auto 16px;
+    }
+
+    @include for-hero-mobile() {
+            background-color: transparent;
+            box-shadow: none;
+    }
+
+    form {
+            display: flex;
+            justify-content: space-between;
+
+            @include for-hero-mobile() {
+                    flex-direction: column;
+                    gap: 16px;
+            }
+    }
+
+    input {
+            @include send-email();
+            border: none;
+            outline: none;
+            padding: 16px 27px;
+            border-radius: 24px;
+
+            @include for-hero-mobile() {
+                    background-color: $white-color;
+                    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+                    border-radius: 24px;
+            }
+    }
+
+    ::placeholder {
+            @include send-email();
+            opacity: 0.5;
+    }
+}
+
+@import 'all-blocks/all-blocks';
+

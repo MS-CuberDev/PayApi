@@ -1,0 +1,40 @@
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 145px;
+    text-align: center;
+    gap: 30px;
+
+    @include for-tablet() {
+        gap: 10px;
+    }
+
+    @include for-nav() {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .card {
+        &__img {
+            height: 105px;
+            width: 105px;
+            background-color: $content-color;
+            margin: 0 auto;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__title {
+            @include card-title();
+            padding: 32px 0 16px;
+        }
+
+        &__description {
+            @include paragraph();
+            color: $light-grey;
+        }
+    }
+}

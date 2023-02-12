@@ -1,0 +1,17 @@
+.ready {
+    padding: 96px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-tablet() {
+        display: block;
+        text-align: center;
+    }
+
+    &__left {
+        &-title {
+            @include heading-two();
+        }
+    }
+}

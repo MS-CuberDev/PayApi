@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayApi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container">
+          <div class="menu">
+            <img
+              class="menu__logo"
+              src="./images/icons/logo.svg"
+              alt="PayApi"
+            />
+            <div class="menu__burger" onclick="menuOpen()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu__bar">
+              <div class="close-menu" onclick="menuCloseBtn()">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <ul class="menu__ul">
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">Pricing</a>
+                </li>
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">About</a>
+                </li>
+                <li class="menu__ul-item">
+                  <a class="menu__ul-link" href="#">Contact</a>
+                </li>
+              </ul>
+              <a href="#" class="btn btn--hero">Schedule a Demo</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="hero">
+        <!-- <span class="hero__shape"></span> -->
+        <div class="container">
+          <div class="hero__flex">
+            <div class="hero__flex-left">
+              <h1 class="hero__flex-left-title">
+                Start building with our APIs for absolutely free.
+              </h1>
+              <div class="send">
+                <form action="https://echo.htmlacademy.ru/" method="POST">
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email address"
+                  />
+                  <a href="#" class="btn btn--hero">Schedule a Demo</a>
+                </form>
+              </div>
+              <span class="hero__flex-left-contact">
+                Have any questions? <b>Contact Us</b>
+              </span>
+            </div>
+            <div class="hero__flex-right">
+              <img
+                class="hero__flex-right-img"
+                src="./images/hero-img.png"
+                alt="Telephone image"
+                srcset="./images/hero-img@2x.png 2x, ./images/hero-img.png 1x"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="work">
+        <div class="work">
+          <div class="container">
+            <div class="work__flex">
+              <div class="work__flex-left">
+                <h2 class="work__flex-left-title">Who we work with</h2>
+                <p class="work__flex-left-description">
+                  Today, millions of people around the world have successfully
+                  connected their accounts to apps they love using our API. We
+                  provide developers with the tools they need to create easy and
+                  accessible experiences for their users.
+                </p>
+                <a href="#" class="btn btn--work">About us</a>
+              </div>
+              <div class="work__flex-right">
+                <img src="./images/tesla.svg" alt="" />
+                <img src="./images/microsoft.svg" alt="" />
+                <img src="./images/hp.svg" alt="" />
+                <img src="./images/oracle.svg" alt="" />
+                <img src="./images/google.svg" alt="" />
+                <img src="./images/nvidia.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="implement">
+        <div class="implement">
+          <div class="container">
+            <div class="implement__flex">
+              <div class="implement__flex-left">
+                <img src="./images/implement-img.svg" alt="Text editor" />
+              </div>
+              <div class="implement__flex-right">
+                <h2 class="implement__flex-right-title">Easy to implement</h2>
+                <p class="implement__flex-right-description">
+                  Our API comes with just a few lines of code. You’ll be up and
+                  running in no time. We built our documentation page to
+                  integrate payments functionality with ease.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="simple">
+        <div class="simple">
+          <div class="container">
+            <div class="simple__flex">
+              <div class="simple__flex-left">
+                <h2 class="simple__flex-left-title">Simple UI & UX</h2>
+                <p class="simple__flex-left-description">
+                  Our pre-built form is easy to integrate in your app or
+                  website’s checkout flow and designed to optimize conversion.
+                </p>
+              </div>
+              <div class="simple__flex-right">
+                <img src="./images/phones.svg" alt="Phones" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cards">
+            <div class="card">
+              <div class="card__img">
+                <img src="./images/icons/moneys.svg" alt="Illustration" />
+              </div>
+              <h3 class="card__title">Personal Finances</h3>
+              <p class="card__description">
+                Consolidate financial data from multiple sources and categorize
+                transactions up to 2 years of history. Analyze reports to
+                reconcile activities in your account.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="./images/icons/reyting.svg" alt="Illustration" />
+              </div>
+              <h3 class="card__title">Personal Finances</h3>
+              <p class="card__description">
+                Consolidate financial data from multiple sources and categorize
+                transactions up to 2 years of history. Analyze reports to
+                reconcile activities in your account.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="./images/icons/card.svg" alt="Illustration" />
+              </div>
+              <h3 class="card__title">Personal Finances</h3>
+              <p class="card__description">
+                Consolidate financial data from multiple sources and categorize
+                transactions up to 2 years of history. Analyze reports to
+                reconcile activities in your account.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="ready">
+            <div class="ready__left">
+              <h2 class="ready__left-title">Ready to start?</h2>
+            </div>
+            <div class="send">
+              <form action="https://echo.htmlacademy.ru/" method="POST">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email address"
+                />
+                <a href="#" class="btn btn--hero">Schedule a Demo</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__menu">
+          <img
+            class="footer__menu-logo"
+            src="./images/icons/logo-light.svg"
+            alt="PayApi"
+          />
+          <div class="footer__bar">
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">Pricing</a>
+              </li>
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">About</a>
+              </li>
+              <li class="footer__menu-ul-item">
+                <a class="footer__menu-ul-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <div class="footer__links">
+              <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

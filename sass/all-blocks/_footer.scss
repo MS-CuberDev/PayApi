@@ -1,0 +1,71 @@
+.footer {
+    padding: 30px 0;
+    background-color: $content-color;
+
+    @include for-nav() {
+        padding: 40px 0;
+    }
+
+    &__bar {
+        @include centerItems();
+        justify-content: space-between;
+        width: 100%;
+
+        @include for-nav() {
+            flex-direction: column;
+            gap: 40px
+        }
+    }
+
+    &__menu {
+        @include centerItems();
+        gap: 64px;
+
+        @include for-nav() {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        &-ul {
+            @include centerItems();
+            list-style: none;
+            gap: 40px;
+
+            @include for-nav() {
+                flex-direction: column;
+                margin: 0 auto;
+            }
+
+            &-link {
+                font-family: $text-font;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 18px;
+                color: $white-color;
+                opacity: 0.7;
+                text-decoration: none;
+                transition: 0.2s ease;
+            }
+
+            &-link:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        i {
+            font-size: 24px;
+            color: $white-color;
+            transition: 0.2s ease;
+        }
+
+        i:hover {
+            color: $active-bg;
+        }
+    }
+}

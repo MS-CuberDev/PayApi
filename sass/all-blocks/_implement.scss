@@ -1,0 +1,33 @@
+.implement {
+    padding-top: 150px;
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        justify-content: space-between;
+        
+        @include for-work() {
+            flex-direction: column;
+            text-align: center
+        }
+
+        &-left {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &-right {
+            &-title {
+                @include heading-two();
+                padding-bottom: 24px;
+            }
+
+            &-description {
+                @include paragraph();
+                color: $light-grey;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+nav {
+        padding: 45px 0;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        background-color: $main-bg;
+}
+
+.btn--hero {
+        background-color: $btn-bg;
+}
+
+.btn--hero:hover {
+        background-color: $active-bg;
+}
+
+.menu {
+        @include centerItems();
+        column-gap: 64px;
+
+        @include for-nav() {
+                justify-content: space-between;
+        }
+
+        &__burger {
+                display: none;
+                z-index: 5;
+
+                @include for-nav() {
+                        display: block;
+                }
+
+                .fa-bars {
+                        font-size: 33px;
+                        color: $main-color;
+                }
+        }
+
+        &__logo {
+                max-width: 134px;
+                width: 100%;
+                height: 37px;
+                object-fit: cover;
+        }
+
+        &__bar {
+                @include centerItems();
+                justify-content: space-between;
+                width: 100%;
+                position: relative;
+
+                @include for-nav() {
+                        flex-direction: column;
+                        height: 100vh;
+                        position: absolute;
+                        justify-content: center;
+                        right: -100%;
+                        top: 0;
+                        max-width: 300px;
+                        background: $main-color;
+                        transition: 0.2s ease;
+                        padding: 0 24px;
+                }
+
+                &.mobile-block {
+                        right: 0;
+                }
+
+                .close-menu {
+                        display: none;
+                        z-index: 10;
+
+                        @include for-nav() {
+                                display: block;
+                        }
+
+                        .fa-xmark {
+                                position: absolute;
+                                font-size: 33px;
+                                color: $main-bg;
+                                top: 48px;
+                                right: 20px;
+                        }
+                }
+        }
+
+        &__ul {
+                @include centerItems();
+                list-style: none;
+                column-gap: 40px;
+
+                @include for-nav() {
+                        flex-direction: column;
+                        row-gap: 32px;
+                        padding-bottom: 48px;
+                        border-top: 1px solid #fbfcfe26;
+                        width: 100%;
+                        padding-top: 43px;
+                }
+
+                &-link {
+                        font-family: $text-font;
+                        font-weight: 700;
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: $main-color;
+                        text-decoration: none;
+                        opacity: 0.7;
+                        transition: 0.2s ease;
+
+                        @include for-nav() {
+                                color: $white-color;
+                                opacity: 1;
+                        }
+                }
+
+                &-link:hover {
+                        opacity: 1;
+                }
+        }
+}
+
+.hero {
+        padding-top: 170px;
+
+        &__flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 30px;
+
+                @include for-hero() {
+                        flex-direction: column-reverse;
+                        text-align: center;
+                }
+
+                &-left {
+                        &-title {
+                                @include heading-one-large();
+                                max-width: 546px;
+
+                                @include for-hero() {
+                                        max-width: 773px;
+                                }
+                        }
+
+                        &-contact {
+                                color: $light-grey;
+                        }
+                }
+
+                &-right {
+                        z-index: 10;
+
+                        &-img {
+                                object-fit: cover;
+                                height: 500px;
+                        }
+                }
+        }
+}
